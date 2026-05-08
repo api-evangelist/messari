@@ -7,29 +7,41 @@ created: '2026-05-08'
 modified: '2026-05-08'
 reconciled: false
 tags:
-- Web3
-- Crypto
-- Research
-- Analytics
-- Asset Data
-- Rate Limiting
-- Quotas
-- Throttling
-description: Placeholder rate-limit artifact for Messari. Replace with real limits once researched.
-notes: Initial scaffold — limits have not yet been reconciled.
+  - Crypto
+  - Research
+  - Rate Limiting
+description: >-
+  Messari documents rate limits per plan tier. Free API tier is approximately 20 requests per
+  minute and 1,000 requests per day per IP. Paid Pro and Enterprise tiers raise the per-minute
+  cap and lift the daily cap. Throttled requests return HTTP 429 with rate-limit headers.
+notes: Free limits widely documented; Pro/Enterprise limits vary by contract.
 sources:
-- https://messari.io/
+  - https://messari.io/api/docs
+  - https://messari.io/pricing
 responseCodes:
   throttled: 429
 limits:
-- name: Default
-  scope: account
-  metric: varies
-  limit: see provider documentation
-  notes: Pending reconciliation.
+  - name: Free per minute
+    scope: ip
+    metric: requests_per_minute
+    limit: 20
+  - name: Free per day
+    scope: ip
+    metric: requests_per_day
+    limit: 1000
+  - name: Pro
+    scope: api_key
+    metric: requests_per_minute
+    limit: 60
+    notes: Approximate; contract-specific.
+  - name: Enterprise
+    scope: api_key
+    metric: requests_per_minute
+    limit: -1
+    notes: Custom limit per contract.
 policies:
-- name: Backoff Strategy
-  description: Clients should implement exponential backoff with jitter and honor any Retry-After header.
+  - name: Backoff Strategy
+    description: Honor 429 Retry-After and apply exponential backoff with jitter.
 maintainers:
-- FN: Kin Lane
-  email: kin@apievangelist.com
+  - FN: Kin Lane
+    email: kin@apievangelist.com

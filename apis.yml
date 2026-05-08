@@ -2,8 +2,6 @@ aid: messari
 url: https://raw.githubusercontent.com/api-evangelist/messari/refs/heads/main/apis.yml
 name: Messari
 x-type: company
-description: >-
-  Messari provides crypto research, analytics, fundamentals, intelligence, and asset profiles. APIs cover assets, markets, news, and Token Unlocks.
 image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
 tags:
   - Web3
@@ -11,13 +9,58 @@ tags:
   - Research
   - Analytics
   - Asset Data
+  - Fundamentals
+  - News
+  - Token Unlocks
 created: '2026-05-08'
 modified: '2026-05-08'
 specificationVersion: '0.19'
-apis: []
+description: >-
+  Messari provides crypto research, analytics, fundamentals, intelligence, and asset profiles
+  through a REST API at data.messari.io. Endpoints cover assets metrics, market data, news,
+  Token Unlocks, screener, governance, treasuries, and AI-powered Messari Copilot. Authentication
+  is via the x-messari-api-key header.
+apis:
+  - aid: messari:rest-api
+    name: Messari REST API
+    tags:
+      - Crypto
+      - Asset Data
+      - Market Data
+      - News
+      - Fundamentals
+      - Token Unlocks
+    image: https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+    baseURL: https://data.messari.io/api
+    humanURL: https://messari.io/api/docs
+    description: >-
+      Comprehensive REST API exposing /v1, /v2 endpoints for asset metrics (price, market cap,
+      ROI, mining stats, supply, developer activity, ROI), markets, news, Token Unlocks, screener,
+      and curated intel. Higher-tier plans unlock proprietary research datasets.
+    properties:
+      - type: Documentation
+        url: https://messari.io/api/docs
+      - type: Pricing
+        url: https://messari.io/pricing
+    x-features:
+      - Asset metrics across 1,500+ assets
+      - News and intel feed
+      - Token Unlocks dataset
+      - Treasuries and governance
+      - Messari Copilot AI agent (higher tiers)
+    x-use-cases:
+      - Power crypto research dashboards
+      - Token-unlock alerting and risk
+      - Curated news ingestion
 common:
-  - type: Website
+  - type: Portal
     url: https://messari.io/
+  - type: Documentation
+    url: https://messari.io/api/docs
+  - type: Pricing
+    url: https://messari.io/pricing
+  - type: GitHub
+    url: https://github.com/messari
   - type: Plans
     url: plans/messari-plans-pricing.yml
   - type: RateLimits
