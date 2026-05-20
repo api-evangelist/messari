@@ -53,6 +53,8 @@ apis:
       - Token-unlock alerting and risk
       - Curated news ingestion
 common:
+  - type: LinkedIn
+    url: https://www.linkedin.com/company/messari
   - type: Portal
     url: https://messari.io/
   - type: Documentation
