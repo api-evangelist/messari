@@ -1,0 +1,734 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Messari API",
+    "version": "1.0"
+  },
+  "request": {
+    "auth": {
+      "type": "apikey",
+      "key": "x-messari-api-key",
+      "value": "{{x-messari-api-key}}",
+      "placement": "header"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Assets",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List all assets",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://data.messari.io/api/v1/assets"
+          },
+          "docs": "List all assets"
+        },
+        {
+          "info": {
+            "name": "Get a specific asset",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://data.messari.io/api/v1/assets/:assetIdentifier",
+            "params": [
+              {
+                "name": "assetIdentifier",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Get a specific asset"
+        },
+        {
+          "info": {
+            "name": "List the timeseries metrics catalog for an asset",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://data.messari.io/api/v1/assets/:asset/metrics",
+            "params": [
+              {
+                "name": "asset",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "List the timeseries metrics catalog for an asset"
+        },
+        {
+          "info": {
+            "name": "Get timeseries data for an asset metric",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://data.messari.io/api/v1/assets/:asset/timeseries/:metric",
+            "params": [
+              {
+                "name": "asset",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "metric",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "start",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "end",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "interval",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "Get timeseries data for an asset metric"
+        },
+        {
+          "info": {
+            "name": "List assets (v2) with coverage information",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://data.messari.io/api/v2/assets"
+          },
+          "docs": "List assets (v2) with coverage information"
+        },
+        {
+          "info": {
+            "name": "Get detailed asset information (up to 20 IDs)",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://data.messari.io/api/v2/assets/:ids/details",
+            "params": [
+              {
+                "name": "ids",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Get detailed asset information (up to 20 IDs)"
+        },
+        {
+          "info": {
+            "name": "Get timeseries data for an asset metric (v2)",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://data.messari.io/api/v2/assets/:asset/time-series/:metric",
+            "params": [
+              {
+                "name": "asset",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "metric",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Get timeseries data for an asset metric (v2)"
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Markets",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List markets",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://data.messari.io/api/v1/markets"
+          },
+          "docs": "List markets"
+        },
+        {
+          "info": {
+            "name": "Get a specific market",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://data.messari.io/api/v1/markets/:marketIdentifier",
+            "params": [
+              {
+                "name": "marketIdentifier",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Get a specific market"
+        },
+        {
+          "info": {
+            "name": "List market metrics catalog",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://data.messari.io/api/v1/markets/:market/metrics",
+            "params": [
+              {
+                "name": "market",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "List market metrics catalog"
+        },
+        {
+          "info": {
+            "name": "Get market timeseries data",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://data.messari.io/api/v1/markets/:market/timeseries/:metric",
+            "params": [
+              {
+                "name": "market",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "metric",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Get market timeseries data"
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Networks",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List networks",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://data.messari.io/api/v2/networks"
+          },
+          "docs": "List networks"
+        },
+        {
+          "info": {
+            "name": "Network metrics catalog",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://data.messari.io/api/v2/networks/:network/metrics",
+            "params": [
+              {
+                "name": "network",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Network metrics catalog"
+        },
+        {
+          "info": {
+            "name": "Network timeseries data",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://data.messari.io/api/v2/networks/:network/timeseries/:metric",
+            "params": [
+              {
+                "name": "network",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "metric",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Network timeseries data"
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Exchanges",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List exchanges",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://data.messari.io/api/exchanges"
+          },
+          "docs": "List exchanges"
+        },
+        {
+          "info": {
+            "name": "Get a specific exchange",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://data.messari.io/api/exchanges/:exchange",
+            "params": [
+              {
+                "name": "exchange",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Get a specific exchange"
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Protocols",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List all protocols",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://data.messari.io/api/protocols"
+          },
+          "docs": "List all protocols"
+        },
+        {
+          "info": {
+            "name": "Protocol metrics",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://data.messari.io/api/protocols/:protocol/metrics",
+            "params": [
+              {
+                "name": "protocol",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Protocol metrics"
+        },
+        {
+          "info": {
+            "name": "List DEX protocols",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://data.messari.io/api/dex"
+          },
+          "docs": "List DEX protocols"
+        },
+        {
+          "info": {
+            "name": "List lending protocols",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://data.messari.io/api/lending"
+          },
+          "docs": "List lending protocols"
+        },
+        {
+          "info": {
+            "name": "List liquid staking protocols",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://data.messari.io/api/liquid-staking"
+          },
+          "docs": "List liquid staking protocols"
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "News",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Get the news feed",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://data.messari.io/api/v1/news-feed"
+          },
+          "docs": "Get the news feed"
+        },
+        {
+          "info": {
+            "name": "List news sources",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://data.messari.io/api/v1/news-sources"
+          },
+          "docs": "List news sources"
+        },
+        {
+          "info": {
+            "name": "List events (POST form)",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://data.messari.io/api/v1/events"
+          },
+          "docs": "List events (POST form)"
+        },
+        {
+          "info": {
+            "name": "Get paginated developments",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://data.messari.io/api/v2/developments"
+          },
+          "docs": "Get paginated developments"
+        },
+        {
+          "info": {
+            "name": "Get paginated events",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://data.messari.io/api/v2/events"
+          },
+          "docs": "Get paginated events"
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Token Unlocks",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Get unlock timeseries for an asset",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://data.messari.io/api/v1/assets/:assetId/unlocks",
+            "params": [
+              {
+                "name": "assetId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Get unlock timeseries for an asset"
+        },
+        {
+          "info": {
+            "name": "Get vesting schedule for an asset",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://data.messari.io/api/v1/assets/:assetId/vesting-schedule",
+            "params": [
+              {
+                "name": "assetId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Get vesting schedule for an asset"
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Monitoring",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List user monitoring views",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://data.messari.io/api/v2/monitoring-views"
+          },
+          "docs": "List user monitoring views"
+        },
+        {
+          "info": {
+            "name": "Get user watchlists",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://data.messari.io/api/v1/watchlists"
+          },
+          "docs": "Get user watchlists"
+        },
+        {
+          "info": {
+            "name": "Create a watchlist",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://data.messari.io/api/v1/watchlists"
+          },
+          "docs": "Create a watchlist"
+        },
+        {
+          "info": {
+            "name": "Update a watchlist",
+            "type": "http"
+          },
+          "http": {
+            "method": "PATCH",
+            "url": "https://data.messari.io/api/v1/watchlists/:id",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Update a watchlist"
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "AI",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Messari Copilot chat completions (Messari format)",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://data.messari.io/api/chat-completions"
+          },
+          "docs": "Messari Copilot chat completions (Messari format)"
+        },
+        {
+          "info": {
+            "name": "Messari Copilot chat completions (OpenAI-compatible format)",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://data.messari.io/api/openai/chat-completions"
+          },
+          "docs": "Messari Copilot chat completions (OpenAI-compatible format)"
+        },
+        {
+          "info": {
+            "name": "List deep-research jobs",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://data.messari.io/api/v1/deep-research"
+          },
+          "docs": "List deep-research jobs"
+        },
+        {
+          "info": {
+            "name": "Create a deep-research job",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://data.messari.io/api/v1/deep-research"
+          },
+          "docs": "Create a deep-research job"
+        },
+        {
+          "info": {
+            "name": "Get a deep-research job status",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://data.messari.io/api/v1/deep-research/:id",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Get a deep-research job status"
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Research",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Get research reports",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://data.messari.io/api/v1/reports"
+          },
+          "docs": "Get research reports"
+        },
+        {
+          "info": {
+            "name": "Get a specific research report",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://data.messari.io/api/v1/reports/:reportId",
+            "params": [
+              {
+                "name": "reportId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Get a specific research report"
+        },
+        {
+          "info": {
+            "name": "Get report tags",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://data.messari.io/api/v1/reports/tags"
+          },
+          "docs": "Get report tags"
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Datasets",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List available bulk datasets",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://data.messari.io/api/v1/datasets"
+          },
+          "docs": "List available bulk datasets"
+        },
+        {
+          "info": {
+            "name": "Download a dataset (CSV/JSONL)",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://data.messari.io/api/v1/datasets/:slug/:granularity/data",
+            "params": [
+              {
+                "name": "slug",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "granularity",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Download a dataset (CSV/JSONL)"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}
