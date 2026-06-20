@@ -2,7 +2,7 @@ aid: messari
 url: https://raw.githubusercontent.com/api-evangelist/messari/refs/heads/main/apis.yml
 name: Messari
 kind: company
-image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
 tags:
   - Web3
   - Crypto
@@ -30,7 +30,7 @@ apis:
       - News
       - Fundamentals
       - Token Unlocks
-    image: https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+    image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
     baseURL: https://data.messari.io/api
     humanURL: https://messari.io/api/docs
     description: >-
