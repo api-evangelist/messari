@@ -53,6 +53,10 @@ apis:
       - Token-unlock alerting and risk
       - Curated news ingestion
 common:
+  - type: DomainSecurity
+    url: security/messari-domain-security.yml
+  - type: Authentication
+    url: authentication/messari-authentication.yml
   - type: LinkedIn
     url: https://www.linkedin.com/company/messari
   - type: Portal

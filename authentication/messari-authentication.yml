@@ -1,0 +1,16 @@
+generated: '2026-07-11'
+method: derived
+source: openapi/messari-openapi.yml
+summary:
+  types:
+  - apiKey
+  api_key_in:
+  - header
+schemes:
+- name: apiKeyAuth
+  type: apiKey
+  in: header
+  parameter: x-messari-api-key
+  description: Messari API key
+  sources:
+  - openapi/messari-openapi.yml
