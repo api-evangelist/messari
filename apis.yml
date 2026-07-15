@@ -53,6 +53,8 @@ apis:
       - Token-unlock alerting and risk
       - Curated news ingestion
 common:
+  - type: AgenticAccess
+    url: agentic-access/messari-agentic-access.yml
   - type: DomainSecurity
     url: security/messari-domain-security.yml
   - type: Authentication
