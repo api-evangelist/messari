@@ -1,0 +1,61 @@
+openapi: 3.1.0
+info:
+  title: Messari AI Token Unlocks API
+  description: 'Messari provides crypto research, analytics, fundamentals, intelligence,
+
+    and asset profiles via a REST API at data.messari.io. Endpoints cover
+
+    assets, markets, networks, exchanges, protocols, news/events, token
+
+    unlocks, monitoring/watchlists, AI chat completions, research reports,
+
+    and bulk datasets. Authentication is via the x-messari-api-key header.
+
+    '
+  version: '1.0'
+  contact:
+    name: Messari
+    url: https://docs.messari.io/
+servers:
+- url: https://data.messari.io/api
+  description: Production API (Messari Data API)
+security:
+- apiKeyAuth: []
+tags:
+- name: Token Unlocks
+paths:
+  /v1/assets/{assetId}/unlocks:
+    get:
+      tags:
+      - Token Unlocks
+      summary: Get unlock timeseries for an asset
+      parameters:
+      - in: path
+        name: assetId
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Unlock timeseries
+  /v1/assets/{assetId}/vesting-schedule:
+    get:
+      tags:
+      - Token Unlocks
+      summary: Get vesting schedule for an asset
+      parameters:
+      - in: path
+        name: assetId
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Vesting schedule
+components:
+  securitySchemes:
+    apiKeyAuth:
+      type: apiKey
+      in: header
+      name: x-messari-api-key
+      description: Messari API key

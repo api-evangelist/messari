@@ -1,0 +1,78 @@
+openapi: 3.1.0
+info:
+  title: Messari AI API
+  description: 'Messari provides crypto research, analytics, fundamentals, intelligence,
+
+    and asset profiles via a REST API at data.messari.io. Endpoints cover
+
+    assets, markets, networks, exchanges, protocols, news/events, token
+
+    unlocks, monitoring/watchlists, AI chat completions, research reports,
+
+    and bulk datasets. Authentication is via the x-messari-api-key header.
+
+    '
+  version: '1.0'
+  contact:
+    name: Messari
+    url: https://docs.messari.io/
+servers:
+- url: https://data.messari.io/api
+  description: Production API (Messari Data API)
+security:
+- apiKeyAuth: []
+tags:
+- name: AI
+paths:
+  /chat-completions:
+    post:
+      tags:
+      - AI
+      summary: Messari Copilot chat completions (Messari format)
+      responses:
+        '200':
+          description: Completion
+  /openai/chat-completions:
+    post:
+      tags:
+      - AI
+      summary: Messari Copilot chat completions (OpenAI-compatible format)
+      responses:
+        '200':
+          description: Completion
+  /v1/deep-research:
+    post:
+      tags:
+      - AI
+      summary: Create a deep-research job
+      responses:
+        '202':
+          description: Research job created
+    get:
+      tags:
+      - AI
+      summary: List deep-research jobs
+      responses:
+        '200':
+          description: Research jobs
+  /v1/deep-research/{id}:
+    get:
+      tags:
+      - AI
+      summary: Get a deep-research job status
+      parameters:
+      - in: path
+        name: id
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Job status
+components:
+  securitySchemes:
+    apiKeyAuth:
+      type: apiKey
+      in: header
+      name: x-messari-api-key
+      description: Messari API key

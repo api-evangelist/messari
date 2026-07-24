@@ -1,0 +1,73 @@
+openapi: 3.1.0
+info:
+  title: Messari AI News API
+  description: 'Messari provides crypto research, analytics, fundamentals, intelligence,
+
+    and asset profiles via a REST API at data.messari.io. Endpoints cover
+
+    assets, markets, networks, exchanges, protocols, news/events, token
+
+    unlocks, monitoring/watchlists, AI chat completions, research reports,
+
+    and bulk datasets. Authentication is via the x-messari-api-key header.
+
+    '
+  version: '1.0'
+  contact:
+    name: Messari
+    url: https://docs.messari.io/
+servers:
+- url: https://data.messari.io/api
+  description: Production API (Messari Data API)
+security:
+- apiKeyAuth: []
+tags:
+- name: News
+paths:
+  /v1/news-feed:
+    get:
+      tags:
+      - News
+      summary: Get the news feed
+      responses:
+        '200':
+          description: News feed
+  /v1/news-sources:
+    get:
+      tags:
+      - News
+      summary: List news sources
+      responses:
+        '200':
+          description: News sources
+  /v1/events:
+    post:
+      tags:
+      - News
+      summary: List events (POST form)
+      responses:
+        '200':
+          description: Events
+  /v2/developments:
+    get:
+      tags:
+      - News
+      summary: Get paginated developments
+      responses:
+        '200':
+          description: Developments
+  /v2/events:
+    get:
+      tags:
+      - News
+      summary: Get paginated events
+      responses:
+        '200':
+          description: Events
+components:
+  securitySchemes:
+    apiKeyAuth:
+      type: apiKey
+      in: header
+      name: x-messari-api-key
+      description: Messari API key

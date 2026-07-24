@@ -1,0 +1,55 @@
+openapi: 3.1.0
+info:
+  title: Messari AI Exchanges API
+  description: 'Messari provides crypto research, analytics, fundamentals, intelligence,
+
+    and asset profiles via a REST API at data.messari.io. Endpoints cover
+
+    assets, markets, networks, exchanges, protocols, news/events, token
+
+    unlocks, monitoring/watchlists, AI chat completions, research reports,
+
+    and bulk datasets. Authentication is via the x-messari-api-key header.
+
+    '
+  version: '1.0'
+  contact:
+    name: Messari
+    url: https://docs.messari.io/
+servers:
+- url: https://data.messari.io/api
+  description: Production API (Messari Data API)
+security:
+- apiKeyAuth: []
+tags:
+- name: Exchanges
+paths:
+  /exchanges:
+    get:
+      tags:
+      - Exchanges
+      summary: List exchanges
+      responses:
+        '200':
+          description: Exchanges
+  /exchanges/{exchange}:
+    get:
+      tags:
+      - Exchanges
+      summary: Get a specific exchange
+      parameters:
+      - in: path
+        name: exchange
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Exchange details
+components:
+  securitySchemes:
+    apiKeyAuth:
+      type: apiKey
+      in: header
+      name: x-messari-api-key
+      description: Messari API key

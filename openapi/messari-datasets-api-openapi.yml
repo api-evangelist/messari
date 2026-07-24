@@ -1,0 +1,63 @@
+openapi: 3.1.0
+info:
+  title: Messari AI Datasets API
+  description: 'Messari provides crypto research, analytics, fundamentals, intelligence,
+
+    and asset profiles via a REST API at data.messari.io. Endpoints cover
+
+    assets, markets, networks, exchanges, protocols, news/events, token
+
+    unlocks, monitoring/watchlists, AI chat completions, research reports,
+
+    and bulk datasets. Authentication is via the x-messari-api-key header.
+
+    '
+  version: '1.0'
+  contact:
+    name: Messari
+    url: https://docs.messari.io/
+servers:
+- url: https://data.messari.io/api
+  description: Production API (Messari Data API)
+security:
+- apiKeyAuth: []
+tags:
+- name: Datasets
+paths:
+  /v1/datasets:
+    get:
+      tags:
+      - Datasets
+      summary: List available bulk datasets
+      responses:
+        '200':
+          description: Datasets
+  /v1/datasets/{slug}/{granularity}/data:
+    get:
+      tags:
+      - Datasets
+      summary: Download a dataset (CSV/JSONL)
+      parameters:
+      - in: path
+        name: slug
+        required: true
+        schema:
+          type: string
+      - in: path
+        name: granularity
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Dataset payload
+          content:
+            text/csv: {}
+            application/x-ndjson: {}
+components:
+  securitySchemes:
+    apiKeyAuth:
+      type: apiKey
+      in: header
+      name: x-messari-api-key
+      description: Messari API key
