@@ -2,7 +2,20 @@ aid: messari
 url: https://raw.githubusercontent.com/api-evangelist/messari/refs/heads/main/apis.yml
 name: Messari
 kind: company
-image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+accessModel:
+  pricing: freemium
+  onboarding: self-serve
+  trial: false
+  try_now: true
+  public: false
+  label: Freemium · Self-serve signup
+  confidence: high
+  source:
+  - plans
+  - authentication
+  generated: '2026-07-22'
+  method: derived
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/messari.png
 tags:
   - Web3
   - Crypto
@@ -21,37 +34,147 @@ description: >-
   Token Unlocks, screener, governance, treasuries, and AI-powered Messari Copilot. Authentication
   is via the x-messari-api-key header.
 apis:
-  - aid: messari:rest-api
-    name: Messari REST API
-    tags:
-      - Crypto
-      - Asset Data
-      - Market Data
-      - News
-      - Fundamentals
-      - Token Unlocks
-    image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
-    baseURL: https://data.messari.io/api
-    humanURL: https://messari.io/api/docs
-    description: >-
-      Comprehensive REST API exposing /v1, /v2 endpoints for asset metrics (price, market cap,
-      ROI, mining stats, supply, developer activity, ROI), markets, news, Token Unlocks, screener,
-      and curated intel. Higher-tier plans unlock proprietary research datasets.
-    properties:
-      - type: Documentation
-        url: https://messari.io/api/docs
-      - type: Pricing
-        url: https://messari.io/pricing
-    x-features:
-      - Asset metrics across 1,500+ assets
-      - News and intel feed
-      - Token Unlocks dataset
-      - Treasuries and governance
-      - Messari Copilot AI agent (higher tiers)
-    x-use-cases:
-      - Power crypto research dashboards
-      - Token-unlock alerting and risk
-      - Curated news ingestion
+- aid: messari:rest-api
+  name: Messari REST API
+  tags:
+  - Crypto
+  - Asset Data
+  - Market Data
+  - News
+  - Fundamentals
+  - Token Unlocks
+  image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+  baseURL: https://data.messari.io/api
+  humanURL: https://messari.io/api/docs
+  description: >-
+    Comprehensive REST API exposing /v1, /v2 endpoints for asset metrics (price, market cap, ROI, mining
+    stats, supply, developer activity, ROI), markets, news, Token Unlocks, screener, and curated intel.
+    Higher-tier plans unlock proprietary research datasets.
+  properties:
+  - type: Documentation
+    url: https://messari.io/api/docs
+  - type: Pricing
+    url: https://messari.io/pricing
+  x-features:
+  - Asset metrics across 1,500+ assets
+  - News and intel feed
+  - Token Unlocks dataset
+  - Treasuries and governance
+  - Messari Copilot AI agent (higher tiers)
+  x-use-cases:
+  - Power crypto research dashboards
+  - Token-unlock alerting and risk
+  - Curated news ingestion
+- aid: messari:messari-ai-api
+  name: Messari AI API
+  description: The AI API from Messari — 4 operation(s) for ai.
+  humanURL: https://messari.io/api/docs
+  baseURL: https://data.messari.io/api
+  tags:
+  - AI
+  properties:
+  - type: OpenAPI
+    url: openapi/messari-ai-api-openapi.yml
+- aid: messari:messari-assets-api
+  name: Messari Assets API
+  description: The Assets API from Messari — 7 operation(s) for assets.
+  humanURL: https://messari.io/api/docs
+  baseURL: https://data.messari.io/api
+  tags:
+  - Assets
+  properties:
+  - type: OpenAPI
+    url: openapi/messari-assets-api-openapi.yml
+- aid: messari:messari-datasets-api
+  name: Messari Datasets API
+  description: The Datasets API from Messari — 2 operation(s) for datasets.
+  humanURL: https://messari.io/api/docs
+  baseURL: https://data.messari.io/api
+  tags:
+  - Datasets
+  properties:
+  - type: OpenAPI
+    url: openapi/messari-datasets-api-openapi.yml
+- aid: messari:messari-exchanges-api
+  name: Messari Exchanges API
+  description: The Exchanges API from Messari — 2 operation(s) for exchanges.
+  humanURL: https://messari.io/api/docs
+  baseURL: https://data.messari.io/api
+  tags:
+  - Exchanges
+  properties:
+  - type: OpenAPI
+    url: openapi/messari-exchanges-api-openapi.yml
+- aid: messari:messari-markets-api
+  name: Messari Markets API
+  description: The Markets API from Messari — 4 operation(s) for markets.
+  humanURL: https://messari.io/api/docs
+  baseURL: https://data.messari.io/api
+  tags:
+  - Markets
+  properties:
+  - type: OpenAPI
+    url: openapi/messari-markets-api-openapi.yml
+- aid: messari:messari-monitoring-api
+  name: Messari Monitoring API
+  description: The Monitoring API from Messari — 3 operation(s) for monitoring.
+  humanURL: https://messari.io/api/docs
+  baseURL: https://data.messari.io/api
+  tags:
+  - Monitoring
+  properties:
+  - type: OpenAPI
+    url: openapi/messari-monitoring-api-openapi.yml
+- aid: messari:messari-networks-api
+  name: Messari Networks API
+  description: The Networks API from Messari — 3 operation(s) for networks.
+  humanURL: https://messari.io/api/docs
+  baseURL: https://data.messari.io/api
+  tags:
+  - Networks
+  properties:
+  - type: OpenAPI
+    url: openapi/messari-networks-api-openapi.yml
+- aid: messari:messari-news-api
+  name: Messari News API
+  description: The News API from Messari — 5 operation(s) for news.
+  humanURL: https://messari.io/api/docs
+  baseURL: https://data.messari.io/api
+  tags:
+  - News
+  properties:
+  - type: OpenAPI
+    url: openapi/messari-news-api-openapi.yml
+- aid: messari:messari-protocols-api
+  name: Messari Protocols API
+  description: The Protocols API from Messari — 5 operation(s) for protocols.
+  humanURL: https://messari.io/api/docs
+  baseURL: https://data.messari.io/api
+  tags:
+  - Protocols
+  properties:
+  - type: OpenAPI
+    url: openapi/messari-protocols-api-openapi.yml
+- aid: messari:messari-research-api
+  name: Messari Research API
+  description: The Research API from Messari — 3 operation(s) for research.
+  humanURL: https://messari.io/api/docs
+  baseURL: https://data.messari.io/api
+  tags:
+  - Research
+  properties:
+  - type: OpenAPI
+    url: openapi/messari-research-api-openapi.yml
+- aid: messari:messari-token-unlocks-api
+  name: Messari Token Unlocks API
+  description: The Token Unlocks API from Messari — 2 operation(s) for token unlocks.
+  humanURL: https://messari.io/api/docs
+  baseURL: https://data.messari.io/api
+  tags:
+  - Token Unlocks
+  properties:
+  - type: OpenAPI
+    url: openapi/messari-token-unlocks-api-openapi.yml
 common:
   - type: AgenticAccess
     url: agentic-access/messari-agentic-access.yml
