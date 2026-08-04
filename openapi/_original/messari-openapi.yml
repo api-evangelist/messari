@@ -1,0 +1,411 @@
+openapi: 3.1.0
+info:
+  title: Messari API
+  description: |
+    Messari provides crypto research, analytics, fundamentals, intelligence,
+    and asset profiles via a REST API at data.messari.io. Endpoints cover
+    assets, markets, networks, exchanges, protocols, news/events, token
+    unlocks, monitoring/watchlists, AI chat completions, research reports,
+    and bulk datasets. Authentication is via the x-messari-api-key header.
+  version: "1.0"
+  contact:
+    name: Messari
+    url: https://docs.messari.io/
+servers:
+  - url: https://data.messari.io/api
+    description: Production API (Messari Data API)
+security:
+  - apiKeyAuth: []
+tags:
+  - name: Assets
+  - name: Markets
+  - name: Networks
+  - name: Exchanges
+  - name: Protocols
+  - name: News
+  - name: Token Unlocks
+  - name: Monitoring
+  - name: AI
+  - name: Research
+  - name: Datasets
+paths:
+  /v1/assets:
+    get:
+      tags: [Assets]
+      summary: List all assets
+      responses:
+        '200': { description: Asset list }
+  /v1/assets/{assetIdentifier}:
+    get:
+      tags: [Assets]
+      summary: Get a specific asset
+      parameters:
+        - in: path
+          name: assetIdentifier
+          required: true
+          schema: { type: string }
+      responses:
+        '200': { description: Asset details }
+  /v1/assets/{asset}/metrics:
+    get:
+      tags: [Assets]
+      summary: List the timeseries metrics catalog for an asset
+      parameters:
+        - in: path
+          name: asset
+          required: true
+          schema: { type: string }
+      responses:
+        '200': { description: Metrics catalog }
+  /v1/assets/{asset}/timeseries/{metric}:
+    get:
+      tags: [Assets]
+      summary: Get timeseries data for an asset metric
+      parameters:
+        - in: path
+          name: asset
+          required: true
+          schema: { type: string }
+        - in: path
+          name: metric
+          required: true
+          schema: { type: string }
+        - in: query
+          name: start
+          schema: { type: string, format: date-time }
+        - in: query
+          name: end
+          schema: { type: string, format: date-time }
+        - in: query
+          name: interval
+          schema: { type: string }
+      responses:
+        '200': { description: Timeseries data }
+  /v2/assets:
+    get:
+      tags: [Assets]
+      summary: List assets (v2) with coverage information
+      responses:
+        '200': { description: Asset list }
+  /v2/assets/{ids}/details:
+    get:
+      tags: [Assets]
+      summary: Get detailed asset information (up to 20 IDs)
+      parameters:
+        - in: path
+          name: ids
+          required: true
+          schema: { type: string }
+      responses:
+        '200': { description: Asset details }
+  /v2/assets/{asset}/time-series/{metric}:
+    get:
+      tags: [Assets]
+      summary: Get timeseries data for an asset metric (v2)
+      parameters:
+        - in: path
+          name: asset
+          required: true
+          schema: { type: string }
+        - in: path
+          name: metric
+          required: true
+          schema: { type: string }
+      responses:
+        '200': { description: Timeseries data }
+  /v1/markets:
+    get:
+      tags: [Markets]
+      summary: List markets
+      responses:
+        '200': { description: Markets }
+  /v1/markets/{marketIdentifier}:
+    get:
+      tags: [Markets]
+      summary: Get a specific market
+      parameters:
+        - in: path
+          name: marketIdentifier
+          required: true
+          schema: { type: string }
+      responses:
+        '200': { description: Market details }
+  /v1/markets/{market}/metrics:
+    get:
+      tags: [Markets]
+      summary: List market metrics catalog
+      parameters:
+        - in: path
+          name: market
+          required: true
+          schema: { type: string }
+      responses:
+        '200': { description: Metrics catalog }
+  /v1/markets/{market}/timeseries/{metric}:
+    get:
+      tags: [Markets]
+      summary: Get market timeseries data
+      parameters:
+        - in: path
+          name: market
+          required: true
+          schema: { type: string }
+        - in: path
+          name: metric
+          required: true
+          schema: { type: string }
+      responses:
+        '200': { description: Timeseries data }
+  /v2/networks:
+    get:
+      tags: [Networks]
+      summary: List networks
+      responses:
+        '200': { description: Networks }
+  /v2/networks/{network}/metrics:
+    get:
+      tags: [Networks]
+      summary: Network metrics catalog
+      parameters:
+        - in: path
+          name: network
+          required: true
+          schema: { type: string }
+      responses:
+        '200': { description: Metrics catalog }
+  /v2/networks/{network}/timeseries/{metric}:
+    get:
+      tags: [Networks]
+      summary: Network timeseries data
+      parameters:
+        - in: path
+          name: network
+          required: true
+          schema: { type: string }
+        - in: path
+          name: metric
+          required: true
+          schema: { type: string }
+      responses:
+        '200': { description: Timeseries data }
+  /exchanges:
+    get:
+      tags: [Exchanges]
+      summary: List exchanges
+      responses:
+        '200': { description: Exchanges }
+  /exchanges/{exchange}:
+    get:
+      tags: [Exchanges]
+      summary: Get a specific exchange
+      parameters:
+        - in: path
+          name: exchange
+          required: true
+          schema: { type: string }
+      responses:
+        '200': { description: Exchange details }
+  /protocols:
+    get:
+      tags: [Protocols]
+      summary: List all protocols
+      responses:
+        '200': { description: Protocols }
+  /protocols/{protocol}/metrics:
+    get:
+      tags: [Protocols]
+      summary: Protocol metrics
+      parameters:
+        - in: path
+          name: protocol
+          required: true
+          schema: { type: string }
+      responses:
+        '200': { description: Metrics }
+  /dex:
+    get:
+      tags: [Protocols]
+      summary: List DEX protocols
+      responses:
+        '200': { description: DEX protocols }
+  /lending:
+    get:
+      tags: [Protocols]
+      summary: List lending protocols
+      responses:
+        '200': { description: Lending protocols }
+  /liquid-staking:
+    get:
+      tags: [Protocols]
+      summary: List liquid staking protocols
+      responses:
+        '200': { description: Liquid staking protocols }
+  /v1/news-feed:
+    get:
+      tags: [News]
+      summary: Get the news feed
+      responses:
+        '200': { description: News feed }
+  /v1/news-sources:
+    get:
+      tags: [News]
+      summary: List news sources
+      responses:
+        '200': { description: News sources }
+  /v1/events:
+    post:
+      tags: [News]
+      summary: List events (POST form)
+      responses:
+        '200': { description: Events }
+  /v2/developments:
+    get:
+      tags: [News]
+      summary: Get paginated developments
+      responses:
+        '200': { description: Developments }
+  /v2/events:
+    get:
+      tags: [News]
+      summary: Get paginated events
+      responses:
+        '200': { description: Events }
+  /v1/assets/{assetId}/unlocks:
+    get:
+      tags: [Token Unlocks]
+      summary: Get unlock timeseries for an asset
+      parameters:
+        - in: path
+          name: assetId
+          required: true
+          schema: { type: string }
+      responses:
+        '200': { description: Unlock timeseries }
+  /v1/assets/{assetId}/vesting-schedule:
+    get:
+      tags: [Token Unlocks]
+      summary: Get vesting schedule for an asset
+      parameters:
+        - in: path
+          name: assetId
+          required: true
+          schema: { type: string }
+      responses:
+        '200': { description: Vesting schedule }
+  /v2/monitoring-views:
+    get:
+      tags: [Monitoring]
+      summary: List user monitoring views
+      responses:
+        '200': { description: Monitoring views }
+  /v1/watchlists:
+    get:
+      tags: [Monitoring]
+      summary: Get user watchlists
+      responses:
+        '200': { description: Watchlists }
+    post:
+      tags: [Monitoring]
+      summary: Create a watchlist
+      responses:
+        '201': { description: Watchlist created }
+  /v1/watchlists/{id}:
+    patch:
+      tags: [Monitoring]
+      summary: Update a watchlist
+      parameters:
+        - in: path
+          name: id
+          required: true
+          schema: { type: string }
+      responses:
+        '200': { description: Watchlist updated }
+  /chat-completions:
+    post:
+      tags: [AI]
+      summary: Messari Copilot chat completions (Messari format)
+      responses:
+        '200': { description: Completion }
+  /openai/chat-completions:
+    post:
+      tags: [AI]
+      summary: Messari Copilot chat completions (OpenAI-compatible format)
+      responses:
+        '200': { description: Completion }
+  /v1/deep-research:
+    post:
+      tags: [AI]
+      summary: Create a deep-research job
+      responses:
+        '202': { description: Research job created }
+    get:
+      tags: [AI]
+      summary: List deep-research jobs
+      responses:
+        '200': { description: Research jobs }
+  /v1/deep-research/{id}:
+    get:
+      tags: [AI]
+      summary: Get a deep-research job status
+      parameters:
+        - in: path
+          name: id
+          required: true
+          schema: { type: string }
+      responses:
+        '200': { description: Job status }
+  /v1/reports:
+    get:
+      tags: [Research]
+      summary: Get research reports
+      responses:
+        '200': { description: Reports }
+  /v1/reports/{reportId}:
+    get:
+      tags: [Research]
+      summary: Get a specific research report
+      parameters:
+        - in: path
+          name: reportId
+          required: true
+          schema: { type: string }
+      responses:
+        '200': { description: Report }
+  /v1/reports/tags:
+    get:
+      tags: [Research]
+      summary: Get report tags
+      responses:
+        '200': { description: Tags }
+  /v1/datasets:
+    get:
+      tags: [Datasets]
+      summary: List available bulk datasets
+      responses:
+        '200': { description: Datasets }
+  /v1/datasets/{slug}/{granularity}/data:
+    get:
+      tags: [Datasets]
+      summary: Download a dataset (CSV/JSONL)
+      parameters:
+        - in: path
+          name: slug
+          required: true
+          schema: { type: string }
+        - in: path
+          name: granularity
+          required: true
+          schema: { type: string }
+      responses:
+        '200':
+          description: Dataset payload
+          content:
+            text/csv: {}
+            application/x-ndjson: {}
+components:
+  securitySchemes:
+    apiKeyAuth:
+      type: apiKey
+      in: header
+      name: x-messari-api-key
+      description: Messari API key

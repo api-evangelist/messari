@@ -1,0 +1,34 @@
+{
+  "provider": "messari",
+  "sources": [
+    "messari-ai-api-openapi.yml",
+    "messari-assets-api-openapi.yml",
+    "messari-datasets-api-openapi.yml",
+    "messari-exchanges-api-openapi.yml",
+    "messari-markets-api-openapi.yml",
+    "messari-monitoring-api-openapi.yml",
+    "messari-networks-api-openapi.yml",
+    "messari-news-api-openapi.yml",
+    "messari-protocols-api-openapi.yml",
+    "messari-research-api-openapi.yml",
+    "messari-token-unlocks-api-openapi.yml"
+  ],
+  "outputs": [
+    "messari-ai-api-openapi.yml",
+    "messari-assets-api-openapi.yml",
+    "messari-datasets-api-openapi.yml",
+    "messari-exchanges-api-openapi.yml",
+    "messari-markets-api-openapi.yml",
+    "messari-monitoring-api-openapi.yml",
+    "messari-networks-api-openapi.yml",
+    "messari-news-api-openapi.yml",
+    "messari-protocols-api-openapi.yml",
+    "messari-research-api-openapi.yml",
+    "messari-token-unlocks-api-openapi.yml"
+  ],
+  "archived": [],
+  "errors": [],
+  "warnings": [],
+  "notes": [],
+  "skipped": []
+}
