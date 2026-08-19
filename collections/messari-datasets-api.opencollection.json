@@ -1,0 +1,60 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Messari AI Datasets API",
+    "version": "1.0"
+  },
+  "request": {
+    "auth": {
+      "type": "apikey",
+      "key": "x-messari-api-key",
+      "value": "{{x-messari-api-key}}",
+      "placement": "header"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Datasets",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List available bulk datasets",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://data.messari.io/api/v1/datasets"
+          },
+          "docs": "List available bulk datasets"
+        },
+        {
+          "info": {
+            "name": "Download a dataset (CSV/JSONL)",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://data.messari.io/api/v1/datasets/:slug/:granularity/data",
+            "params": [
+              {
+                "name": "slug",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "granularity",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Download a dataset (CSV/JSONL)"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

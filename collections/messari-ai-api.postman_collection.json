@@ -1,0 +1,400 @@
+{
+  "item": [
+    {
+      "id": "ab4403f1-a2ff-4fcf-bb34-dfe5dd93adb0",
+      "name": "AI",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "cf499861-b60e-4649-9e85-42f7d19674a5",
+          "name": "Messari Copilot chat completions (Messari format)",
+          "request": {
+            "name": "Messari Copilot chat completions (Messari format)",
+            "description": {},
+            "url": {
+              "path": [
+                "chat-completions"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "method": "POST",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "bc489e01-f65c-495e-8808-ceadcc31b600",
+              "name": "Completion",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "chat-completions"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "x-messari-api-key",
+                    "value": "<API Key>"
+                  }
+                ],
+                "method": "POST",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "b65959b9-2415-4660-a5e5-ef6ebb48e481",
+          "name": "Messari Copilot chat completions (OpenAI-compatible format)",
+          "request": {
+            "name": "Messari Copilot chat completions (OpenAI-compatible format)",
+            "description": {},
+            "url": {
+              "path": [
+                "openai",
+                "chat-completions"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "method": "POST",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "c78f6b63-c81f-49f6-9da1-535844927224",
+              "name": "Completion",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "openai",
+                    "chat-completions"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "x-messari-api-key",
+                    "value": "<API Key>"
+                  }
+                ],
+                "method": "POST",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "39c6698d-a21f-4afd-9e0f-fe55c0bd2437",
+          "name": "Create a deep-research job",
+          "request": {
+            "name": "Create a deep-research job",
+            "description": {},
+            "url": {
+              "path": [
+                "v1",
+                "deep-research"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "method": "POST",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "96ff223d-93cc-4a17-ae3b-b48cba1684fa",
+              "name": "Research job created",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v1",
+                    "deep-research"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "x-messari-api-key",
+                    "value": "<API Key>"
+                  }
+                ],
+                "method": "POST",
+                "body": {}
+              },
+              "status": "Accepted",
+              "code": 202,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "3c2cda53-b1e8-40b1-9e09-5f03ade3dc17",
+          "name": "List deep-research jobs",
+          "request": {
+            "name": "List deep-research jobs",
+            "description": {},
+            "url": {
+              "path": [
+                "v1",
+                "deep-research"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "b12e271d-5e56-4d36-bba3-82ffaf309f0f",
+              "name": "Research jobs",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v1",
+                    "deep-research"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "x-messari-api-key",
+                    "value": "<API Key>"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "0f763956-423c-4a28-b149-d2f6acc83c7d",
+          "name": "Get a deep-research job status",
+          "request": {
+            "name": "Get a deep-research job status",
+            "description": {},
+            "url": {
+              "path": [
+                "v1",
+                "deep-research",
+                ":id"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "id",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "dda0f316-6726-4cdb-bbb3-a95643b366c6",
+              "name": "Job status",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v1",
+                    "deep-research",
+                    ":id"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "id",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "x-messari-api-key",
+                    "value": "<API Key>"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://data.messari.io/api",
+      "key": "baseUrl"
+    }
+  ],
+  "auth": {
+    "type": "apikey",
+    "apikey": [
+      {
+        "key": "key",
+        "value": "x-messari-api-key"
+      },
+      {
+        "key": "value",
+        "value": "{{apiKey}}"
+      },
+      {
+        "key": "in",
+        "value": "header"
+      }
+    ]
+  },
+  "info": {
+    "_postman_id": "dbcd70ce-abf6-483c-a99c-faa85ea23c5f",
+    "name": "Messari AI API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Messari provides crypto research, analytics, fundamentals, intelligence,\nand asset profiles via a REST API at data.messari.io. Endpoints cover\nassets, markets, networks, exchanges, protocols, news/events, token\nunlocks, monitoring/watchlists, AI chat completions, research reports,\nand bulk datasets. Authentication is via the x-messari-api-key header.\n\n\nContact Support:\n Name: Messari",
+      "type": "text/plain"
+    }
+  }
+}

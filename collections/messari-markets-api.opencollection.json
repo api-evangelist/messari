@@ -1,0 +1,96 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Messari AI Markets API",
+    "version": "1.0"
+  },
+  "request": {
+    "auth": {
+      "type": "apikey",
+      "key": "x-messari-api-key",
+      "value": "{{x-messari-api-key}}",
+      "placement": "header"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Markets",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List markets",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://data.messari.io/api/v1/markets"
+          },
+          "docs": "List markets"
+        },
+        {
+          "info": {
+            "name": "Get a specific market",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://data.messari.io/api/v1/markets/:marketIdentifier",
+            "params": [
+              {
+                "name": "marketIdentifier",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Get a specific market"
+        },
+        {
+          "info": {
+            "name": "List market metrics catalog",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://data.messari.io/api/v1/markets/:market/metrics",
+            "params": [
+              {
+                "name": "market",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "List market metrics catalog"
+        },
+        {
+          "info": {
+            "name": "Get market timeseries data",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://data.messari.io/api/v1/markets/:market/timeseries/:metric",
+            "params": [
+              {
+                "name": "market",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "metric",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Get market timeseries data"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

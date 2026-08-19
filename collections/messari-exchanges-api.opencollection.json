@@ -1,0 +1,55 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Messari AI Exchanges API",
+    "version": "1.0"
+  },
+  "request": {
+    "auth": {
+      "type": "apikey",
+      "key": "x-messari-api-key",
+      "value": "{{x-messari-api-key}}",
+      "placement": "header"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Exchanges",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List exchanges",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://data.messari.io/api/exchanges"
+          },
+          "docs": "List exchanges"
+        },
+        {
+          "info": {
+            "name": "Get a specific exchange",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://data.messari.io/api/exchanges/:exchange",
+            "params": [
+              {
+                "name": "exchange",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Get a specific exchange"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

@@ -1,0 +1,163 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Messari AI Assets API",
+    "version": "1.0"
+  },
+  "request": {
+    "auth": {
+      "type": "apikey",
+      "key": "x-messari-api-key",
+      "value": "{{x-messari-api-key}}",
+      "placement": "header"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Assets",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List all assets",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://data.messari.io/api/v1/assets"
+          },
+          "docs": "List all assets"
+        },
+        {
+          "info": {
+            "name": "Get a specific asset",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://data.messari.io/api/v1/assets/:assetIdentifier",
+            "params": [
+              {
+                "name": "assetIdentifier",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Get a specific asset"
+        },
+        {
+          "info": {
+            "name": "List the timeseries metrics catalog for an asset",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://data.messari.io/api/v1/assets/:asset/metrics",
+            "params": [
+              {
+                "name": "asset",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "List the timeseries metrics catalog for an asset"
+        },
+        {
+          "info": {
+            "name": "Get timeseries data for an asset metric",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://data.messari.io/api/v1/assets/:asset/timeseries/:metric",
+            "params": [
+              {
+                "name": "asset",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "metric",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "start",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "end",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "interval",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "Get timeseries data for an asset metric"
+        },
+        {
+          "info": {
+            "name": "List assets (v2) with coverage information",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://data.messari.io/api/v2/assets"
+          },
+          "docs": "List assets (v2) with coverage information"
+        },
+        {
+          "info": {
+            "name": "Get detailed asset information (up to 20 IDs)",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://data.messari.io/api/v2/assets/:ids/details",
+            "params": [
+              {
+                "name": "ids",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Get detailed asset information (up to 20 IDs)"
+        },
+        {
+          "info": {
+            "name": "Get timeseries data for an asset metric (v2)",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://data.messari.io/api/v2/assets/:asset/time-series/:metric",
+            "params": [
+              {
+                "name": "asset",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "metric",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Get timeseries data for an asset metric (v2)"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

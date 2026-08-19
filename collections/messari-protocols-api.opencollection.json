@@ -1,0 +1,88 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Messari AI Protocols API",
+    "version": "1.0"
+  },
+  "request": {
+    "auth": {
+      "type": "apikey",
+      "key": "x-messari-api-key",
+      "value": "{{x-messari-api-key}}",
+      "placement": "header"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Protocols",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List all protocols",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://data.messari.io/api/protocols"
+          },
+          "docs": "List all protocols"
+        },
+        {
+          "info": {
+            "name": "Protocol metrics",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://data.messari.io/api/protocols/:protocol/metrics",
+            "params": [
+              {
+                "name": "protocol",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Protocol metrics"
+        },
+        {
+          "info": {
+            "name": "List DEX protocols",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://data.messari.io/api/dex"
+          },
+          "docs": "List DEX protocols"
+        },
+        {
+          "info": {
+            "name": "List lending protocols",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://data.messari.io/api/lending"
+          },
+          "docs": "List lending protocols"
+        },
+        {
+          "info": {
+            "name": "List liquid staking protocols",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://data.messari.io/api/liquid-staking"
+          },
+          "docs": "List liquid staking protocols"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

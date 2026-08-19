@@ -1,0 +1,62 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Messari AI Token Unlocks API",
+    "version": "1.0"
+  },
+  "request": {
+    "auth": {
+      "type": "apikey",
+      "key": "x-messari-api-key",
+      "value": "{{x-messari-api-key}}",
+      "placement": "header"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Token Unlocks",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Get unlock timeseries for an asset",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://data.messari.io/api/v1/assets/:assetId/unlocks",
+            "params": [
+              {
+                "name": "assetId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Get unlock timeseries for an asset"
+        },
+        {
+          "info": {
+            "name": "Get vesting schedule for an asset",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://data.messari.io/api/v1/assets/:assetId/vesting-schedule",
+            "params": [
+              {
+                "name": "assetId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Get vesting schedule for an asset"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

@@ -1,0 +1,81 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Messari AI News API",
+    "version": "1.0"
+  },
+  "request": {
+    "auth": {
+      "type": "apikey",
+      "key": "x-messari-api-key",
+      "value": "{{x-messari-api-key}}",
+      "placement": "header"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "News",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Get the news feed",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://data.messari.io/api/v1/news-feed"
+          },
+          "docs": "Get the news feed"
+        },
+        {
+          "info": {
+            "name": "List news sources",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://data.messari.io/api/v1/news-sources"
+          },
+          "docs": "List news sources"
+        },
+        {
+          "info": {
+            "name": "List events (POST form)",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://data.messari.io/api/v1/events"
+          },
+          "docs": "List events (POST form)"
+        },
+        {
+          "info": {
+            "name": "Get paginated developments",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://data.messari.io/api/v2/developments"
+          },
+          "docs": "Get paginated developments"
+        },
+        {
+          "info": {
+            "name": "Get paginated events",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://data.messari.io/api/v2/events"
+          },
+          "docs": "Get paginated events"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

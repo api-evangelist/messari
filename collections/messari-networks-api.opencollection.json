@@ -1,0 +1,78 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Messari AI Networks API",
+    "version": "1.0"
+  },
+  "request": {
+    "auth": {
+      "type": "apikey",
+      "key": "x-messari-api-key",
+      "value": "{{x-messari-api-key}}",
+      "placement": "header"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Networks",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List networks",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://data.messari.io/api/v2/networks"
+          },
+          "docs": "List networks"
+        },
+        {
+          "info": {
+            "name": "Network metrics catalog",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://data.messari.io/api/v2/networks/:network/metrics",
+            "params": [
+              {
+                "name": "network",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Network metrics catalog"
+        },
+        {
+          "info": {
+            "name": "Network timeseries data",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://data.messari.io/api/v2/networks/:network/timeseries/:metric",
+            "params": [
+              {
+                "name": "network",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "metric",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Network timeseries data"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}
