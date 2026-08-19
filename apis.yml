@@ -27,7 +27,7 @@ tags:
   - Token Unlocks
 created: '2026-05-08'
 modified: '2026-05-08'
-specificationVersion: '0.19'
+specificationVersion: '0.23'
 description: >-
   Messari provides crypto research, analytics, fundamentals, intelligence, and asset profiles
   through a REST API at data.messari.io. Endpoints cover assets metrics, market data, news,
