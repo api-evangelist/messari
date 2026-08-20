@@ -71,6 +71,8 @@ apis:
   humanURL: https://messari.io/api/docs
   baseURL: https://data.messari.io/api
   tags:
+  - Artificial Intelligence
+  tags_raw:
   - AI
   properties:
   - type: OpenAPI
