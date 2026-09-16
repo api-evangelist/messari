@@ -30,22 +30,21 @@ accessModel:
   method: derived
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/messari.png
 tags:
-  - Web3
-  - Crypto
-  - Research
-  - Analytics
-  - Asset Data
-  - Fundamentals
-  - News
-  - Token Unlocks
+- Web3
+- Crypto
+- Research
+- Analytics
+- Asset Data
+- Fundamentals
+- News
+- Token Unlocks
 created: '2026-05-08'
-modified: '2026-05-08'
+modified: '2026-09-16'
 specificationVersion: '0.23'
-description: >-
-  Messari provides crypto research, analytics, fundamentals, intelligence, and asset profiles
-  through a REST API at data.messari.io. Endpoints cover assets metrics, market data, news,
-  Token Unlocks, screener, governance, treasuries, and AI-powered Messari Copilot. Authentication
-  is via the x-messari-api-key header.
+description: Messari provides crypto research, analytics, fundamentals, intelligence, and asset profiles
+  through a REST API at data.messari.io. Endpoints cover assets metrics, market data, news, Token Unlocks,
+  screener, governance, treasuries, and AI-powered Messari Copilot. Authentication is via the x-messari-api-key
+  header.
 apis:
 - aid: messari:rest-api
   name: Messari REST API
@@ -59,10 +58,9 @@ apis:
   image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
   baseURL: https://data.messari.io/api
   humanURL: https://messari.io/api/docs
-  description: >-
-    Comprehensive REST API exposing /v1, /v2 endpoints for asset metrics (price, market cap, ROI, mining
-    stats, supply, developer activity, ROI), markets, news, Token Unlocks, screener, and curated intel.
-    Higher-tier plans unlock proprietary research datasets.
+  description: Comprehensive REST API exposing /v1, /v2 endpoints for asset metrics (price, market cap,
+    ROI, mining stats, supply, developer activity, ROI), markets, news, Token Unlocks, screener, and curated
+    intel. Higher-tier plans unlock proprietary research datasets.
   properties:
   - type: Documentation
     url: https://messari.io/api/docs
@@ -191,28 +189,30 @@ apis:
   - type: OpenAPI
     url: openapi/messari-token-unlocks-api-openapi.yml
 common:
-  - type: AgenticAccess
-    url: agentic-access/messari-agentic-access.yml
-  - type: DomainSecurity
-    url: security/messari-domain-security.yml
-  - type: Authentication
-    url: authentication/messari-authentication.yml
-  - type: LinkedIn
-    url: https://www.linkedin.com/company/messari
-  - type: Portal
-    url: https://messari.io/
-  - type: Documentation
-    url: https://messari.io/api/docs
-  - type: Pricing
-    url: https://messari.io/pricing
-  - type: GitHub
-    url: https://github.com/messari
-  - type: Plans
-    url: plans/messari-plans-pricing.yml
-  - type: RateLimits
-    url: rate-limits/messari-rate-limits.yml
-  - type: FinOps
-    url: finops/messari-finops.yml
+- type: Website
+  url: https://messari.io
+- type: AgenticAccess
+  url: agentic-access/messari-agentic-access.yml
+- type: DomainSecurity
+  url: security/messari-domain-security.yml
+- type: Authentication
+  url: authentication/messari-authentication.yml
+- type: LinkedIn
+  url: https://www.linkedin.com/company/messari
+- type: Portal
+  url: https://messari.io/
+- type: Documentation
+  url: https://messari.io/api/docs
+- type: Pricing
+  url: https://messari.io/pricing
+- type: GitHub
+  url: https://github.com/messari
+- type: Plans
+  url: plans/messari-plans-pricing.yml
+- type: RateLimits
+  url: rate-limits/messari-rate-limits.yml
+- type: FinOps
+  url: finops/messari-finops.yml
 maintainers:
-  - FN: Kin Lane
-    email: kin@apievangelist.com
+- FN: Kin Lane
+  email: kin@apievangelist.com
