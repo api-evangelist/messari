@@ -114,6 +114,8 @@ apis:
   humanURL: https://messari.io/api/docs
   baseURL: https://data.messari.io/api
   tags:
+  - Exchange
+  tags_raw:
   - Exchanges
   properties:
   - type: OpenAPI
@@ -164,6 +166,8 @@ apis:
   humanURL: https://messari.io/api/docs
   baseURL: https://data.messari.io/api
   tags:
+  - Protocol
+  tags_raw:
   - Protocols
   properties:
   - type: OpenAPI
