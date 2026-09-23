@@ -1,6 +1,6 @@
-openapi: 3.1.0
+openapi: 3.2.0
 info:
-  title: Messari AI Research API
+  title: Messari Research API
   description: 'Messari provides crypto research, analytics, fundamentals, intelligence,
 
     and asset profiles via a REST API at data.messari.io. Endpoints cover
@@ -9,9 +9,7 @@ info:
 
     unlocks, monitoring/watchlists, AI chat completions, research reports,
 
-    and bulk datasets. Authentication is via the x-messari-api-key header.
-
-    '
+    and bulk datasets. Authentication is via the x-messari-api-key header.'
   version: '1.0'
   contact:
     name: Messari
@@ -32,6 +30,8 @@ paths:
       responses:
         '200':
           description: Reports
+      operationId: getV1Reports
+      x-operation-id-source: derived
   /v1/reports/{reportId}:
     get:
       tags:
@@ -46,6 +46,8 @@ paths:
       responses:
         '200':
           description: Report
+      operationId: getV1ReportsByReportId
+      x-operation-id-source: derived
   /v1/reports/tags:
     get:
       tags:
@@ -54,6 +56,8 @@ paths:
       responses:
         '200':
           description: Tags
+      operationId: getV1ReportsTags
+      x-operation-id-source: derived
 components:
   securitySchemes:
     apiKeyAuth:

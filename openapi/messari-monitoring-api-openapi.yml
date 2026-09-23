@@ -1,6 +1,6 @@
-openapi: 3.1.0
+openapi: 3.2.0
 info:
-  title: Messari AI Monitoring API
+  title: Messari Monitoring API
   description: 'Messari provides crypto research, analytics, fundamentals, intelligence,
 
     and asset profiles via a REST API at data.messari.io. Endpoints cover
@@ -9,9 +9,7 @@ info:
 
     unlocks, monitoring/watchlists, AI chat completions, research reports,
 
-    and bulk datasets. Authentication is via the x-messari-api-key header.
-
-    '
+    and bulk datasets. Authentication is via the x-messari-api-key header.'
   version: '1.0'
   contact:
     name: Messari
@@ -32,6 +30,8 @@ paths:
       responses:
         '200':
           description: Monitoring views
+      operationId: getV2MonitoringViews
+      x-operation-id-source: derived
   /v1/watchlists:
     get:
       tags:
@@ -40,6 +40,8 @@ paths:
       responses:
         '200':
           description: Watchlists
+      operationId: getV1Watchlists
+      x-operation-id-source: derived
     post:
       tags:
       - Monitoring
@@ -47,6 +49,8 @@ paths:
       responses:
         '201':
           description: Watchlist created
+      operationId: postV1Watchlists
+      x-operation-id-source: derived
   /v1/watchlists/{id}:
     patch:
       tags:
@@ -61,6 +65,8 @@ paths:
       responses:
         '200':
           description: Watchlist updated
+      operationId: patchV1WatchlistsById
+      x-operation-id-source: derived
 components:
   securitySchemes:
     apiKeyAuth:

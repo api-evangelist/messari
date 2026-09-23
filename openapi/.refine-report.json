@@ -1,17 +1,7 @@
 {
   "provider": "messari",
   "sources": [
-    "messari-ai-api-openapi.yml",
-    "messari-assets-api-openapi.yml",
-    "messari-datasets-api-openapi.yml",
-    "messari-exchanges-api-openapi.yml",
-    "messari-markets-api-openapi.yml",
-    "messari-monitoring-api-openapi.yml",
-    "messari-networks-api-openapi.yml",
-    "messari-news-api-openapi.yml",
-    "messari-protocols-api-openapi.yml",
-    "messari-research-api-openapi.yml",
-    "messari-token-unlocks-api-openapi.yml"
+    "_original/messari-openapi.yml"
   ],
   "outputs": [
     "messari-ai-api-openapi.yml",
@@ -29,6 +19,22 @@
   "archived": [],
   "errors": [],
   "warnings": [],
-  "notes": [],
-  "skipped": []
+  "notes": [
+    "sourced from openapi/_original/ (1 archived document(s)); previously refined output at the top level was skipped rather than re-split",
+    "messari-openapi.yml: upgraded openapi 3.1.0 -> OpenAPI 3.2.0",
+    "apis.yml register: already-registered"
+  ],
+  "skipped": [
+    "messari-ai-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "messari-assets-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "messari-datasets-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "messari-exchanges-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "messari-markets-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "messari-monitoring-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "messari-networks-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "messari-news-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "messari-protocols-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "messari-research-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "messari-token-unlocks-api-openapi.yml: previously refined output, superseded by openapi/_original/"
+  ]
 }
