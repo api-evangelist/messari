@@ -1,327 +1,26 @@
-generated: '2026-07-15'
+generated: '2026-09-23'
 method: generated
-source: openapi/messari-openapi.yml
+source: openapi/messari-ai-api-openapi.yml, openapi/messari-assets-api-openapi.yml, openapi/messari-datasets-api-openapi.yml,
+  openapi/messari-exchanges-api-openapi.yml, openapi/messari-markets-api-openapi.yml, openapi/messari-monitoring-api-openapi.yml,
+  openapi/messari-networks-api-openapi.yml, openapi/messari-news-api-openapi.yml, openapi/messari-protocols-api-openapi.yml,
+  openapi/messari-research-api-openapi.yml, openapi/messari-token-unlocks-api-openapi.yml
 description: Recommended x-agentic-access execution contracts, classified heuristically from
   the OpenAPI. A governance starting point for exposing this API to AI agents — review and bind
   audience per deployment. See research/curity/agentic-governance/.
 summary:
   operations: 42
   by_action_class:
-    connected: 36
-    acting: 6
+    acting: 5
+    connected: 37
   by_consequence:
-    read: 36
-    write: 6
-  human_in_the_loop_required: 0
+    write: 4
+    safety-critical: 1
+    read: 37
+  human_in_the_loop_required: 1
 operations:
-- path: /v1/assets
-  method: get
-  x-agentic-access:
-    action-class: connected
-    consequence: read
-    subject: optional
-    token:
-      max-ttl: 3600
-    audit: none
-- path: /v1/assets/{assetIdentifier}
-  method: get
-  x-agentic-access:
-    action-class: connected
-    consequence: read
-    subject: optional
-    token:
-      max-ttl: 3600
-    audit: none
-- path: /v1/assets/{asset}/metrics
-  method: get
-  x-agentic-access:
-    action-class: connected
-    consequence: read
-    subject: optional
-    token:
-      max-ttl: 3600
-    audit: none
-- path: /v1/assets/{asset}/timeseries/{metric}
-  method: get
-  x-agentic-access:
-    action-class: connected
-    consequence: read
-    subject: optional
-    token:
-      max-ttl: 3600
-    audit: none
-- path: /v2/assets
-  method: get
-  x-agentic-access:
-    action-class: connected
-    consequence: read
-    subject: optional
-    token:
-      max-ttl: 3600
-    audit: none
-- path: /v2/assets/{ids}/details
-  method: get
-  x-agentic-access:
-    action-class: connected
-    consequence: read
-    subject: optional
-    token:
-      max-ttl: 3600
-    audit: none
-- path: /v2/assets/{asset}/time-series/{metric}
-  method: get
-  x-agentic-access:
-    action-class: connected
-    consequence: read
-    subject: optional
-    token:
-      max-ttl: 3600
-    audit: none
-- path: /v1/markets
-  method: get
-  x-agentic-access:
-    action-class: connected
-    consequence: read
-    subject: optional
-    token:
-      max-ttl: 3600
-    audit: none
-- path: /v1/markets/{marketIdentifier}
-  method: get
-  x-agentic-access:
-    action-class: connected
-    consequence: read
-    subject: optional
-    token:
-      max-ttl: 3600
-    audit: none
-- path: /v1/markets/{market}/metrics
-  method: get
-  x-agentic-access:
-    action-class: connected
-    consequence: read
-    subject: optional
-    token:
-      max-ttl: 3600
-    audit: none
-- path: /v1/markets/{market}/timeseries/{metric}
-  method: get
-  x-agentic-access:
-    action-class: connected
-    consequence: read
-    subject: optional
-    token:
-      max-ttl: 3600
-    audit: none
-- path: /v2/networks
-  method: get
-  x-agentic-access:
-    action-class: connected
-    consequence: read
-    subject: optional
-    token:
-      max-ttl: 3600
-    audit: none
-- path: /v2/networks/{network}/metrics
-  method: get
-  x-agentic-access:
-    action-class: connected
-    consequence: read
-    subject: optional
-    token:
-      max-ttl: 3600
-    audit: none
-- path: /v2/networks/{network}/timeseries/{metric}
-  method: get
-  x-agentic-access:
-    action-class: connected
-    consequence: read
-    subject: optional
-    token:
-      max-ttl: 3600
-    audit: none
-- path: /exchanges
-  method: get
-  x-agentic-access:
-    action-class: connected
-    consequence: read
-    subject: optional
-    token:
-      max-ttl: 3600
-    audit: none
-- path: /exchanges/{exchange}
-  method: get
-  x-agentic-access:
-    action-class: connected
-    consequence: read
-    subject: optional
-    token:
-      max-ttl: 3600
-    audit: none
-- path: /protocols
-  method: get
-  x-agentic-access:
-    action-class: connected
-    consequence: read
-    subject: optional
-    token:
-      max-ttl: 3600
-    audit: none
-- path: /protocols/{protocol}/metrics
-  method: get
-  x-agentic-access:
-    action-class: connected
-    consequence: read
-    subject: optional
-    token:
-      max-ttl: 3600
-    audit: none
-- path: /dex
-  method: get
-  x-agentic-access:
-    action-class: connected
-    consequence: read
-    subject: optional
-    token:
-      max-ttl: 3600
-    audit: none
-- path: /lending
-  method: get
-  x-agentic-access:
-    action-class: connected
-    consequence: read
-    subject: optional
-    token:
-      max-ttl: 3600
-    audit: none
-- path: /liquid-staking
-  method: get
-  x-agentic-access:
-    action-class: connected
-    consequence: read
-    subject: optional
-    token:
-      max-ttl: 3600
-    audit: none
-- path: /v1/news-feed
-  method: get
-  x-agentic-access:
-    action-class: connected
-    consequence: read
-    subject: optional
-    token:
-      max-ttl: 3600
-    audit: none
-- path: /v1/news-sources
-  method: get
-  x-agentic-access:
-    action-class: connected
-    consequence: read
-    subject: optional
-    token:
-      max-ttl: 3600
-    audit: none
-- path: /v1/events
-  method: post
-  x-agentic-access:
-    action-class: acting
-    consequence: write
-    subject: required
-    audience: null
-    token:
-      max-ttl: 900
-    escalation:
-      human-in-the-loop: conditional
-      triggers:
-      - abnormal
-      - high-value
-    audit: required
-- path: /v2/developments
-  method: get
-  x-agentic-access:
-    action-class: connected
-    consequence: read
-    subject: optional
-    token:
-      max-ttl: 3600
-    audit: none
-- path: /v2/events
-  method: get
-  x-agentic-access:
-    action-class: connected
-    consequence: read
-    subject: optional
-    token:
-      max-ttl: 3600
-    audit: none
-- path: /v1/assets/{assetId}/unlocks
-  method: get
-  x-agentic-access:
-    action-class: connected
-    consequence: read
-    subject: optional
-    token:
-      max-ttl: 3600
-    audit: none
-- path: /v1/assets/{assetId}/vesting-schedule
-  method: get
-  x-agentic-access:
-    action-class: connected
-    consequence: read
-    subject: optional
-    token:
-      max-ttl: 3600
-    audit: none
-- path: /v2/monitoring-views
-  method: get
-  x-agentic-access:
-    action-class: connected
-    consequence: read
-    subject: optional
-    token:
-      max-ttl: 3600
-    audit: none
-- path: /v1/watchlists
-  method: get
-  x-agentic-access:
-    action-class: connected
-    consequence: read
-    subject: optional
-    token:
-      max-ttl: 3600
-    audit: none
-- path: /v1/watchlists
-  method: post
-  x-agentic-access:
-    action-class: acting
-    consequence: write
-    subject: required
-    audience: null
-    token:
-      max-ttl: 900
-    escalation:
-      human-in-the-loop: conditional
-      triggers:
-      - abnormal
-      - high-value
-    audit: required
-- path: /v1/watchlists/{id}
-  method: patch
-  x-agentic-access:
-    action-class: acting
-    consequence: write
-    subject: required
-    audience: null
-    token:
-      max-ttl: 900
-    escalation:
-      human-in-the-loop: conditional
-      triggers:
-      - abnormal
-      - high-value
-    audit: required
 - path: /chat-completions
   method: post
+  operationId: postChatCompletions
   x-agentic-access:
     action-class: acting
     consequence: write
@@ -337,21 +36,23 @@ operations:
     audit: required
 - path: /openai/chat-completions
   method: post
+  operationId: postOpenaiChatCompletions
   x-agentic-access:
     action-class: acting
-    consequence: write
+    consequence: safety-critical
     subject: required
     audience: null
     token:
-      max-ttl: 900
+      max-ttl: 120
+      exchange: true
+      purpose-required: true
+      proof-of-possession: true
     escalation:
-      human-in-the-loop: conditional
-      triggers:
-      - abnormal
-      - high-value
+      human-in-the-loop: required
     audit: required
 - path: /v1/deep-research
   method: post
+  operationId: postV1DeepResearch
   x-agentic-access:
     action-class: acting
     consequence: write
@@ -367,6 +68,7 @@ operations:
     audit: required
 - path: /v1/deep-research
   method: get
+  operationId: getV1DeepResearch
   x-agentic-access:
     action-class: connected
     consequence: read
@@ -376,6 +78,7 @@ operations:
     audit: none
 - path: /v1/deep-research/{id}
   method: get
+  operationId: getV1DeepResearchById
   x-agentic-access:
     action-class: connected
     consequence: read
@@ -383,8 +86,9 @@ operations:
     token:
       max-ttl: 3600
     audit: none
-- path: /v1/reports
+- path: /v1/assets
   method: get
+  operationId: getV1Assets
   x-agentic-access:
     action-class: connected
     consequence: read
@@ -392,8 +96,9 @@ operations:
     token:
       max-ttl: 3600
     audit: none
-- path: /v1/reports/{reportId}
+- path: /v1/assets/{assetIdentifier}
   method: get
+  operationId: getV1AssetsByAssetIdentifier
   x-agentic-access:
     action-class: connected
     consequence: read
@@ -401,8 +106,49 @@ operations:
     token:
       max-ttl: 3600
     audit: none
-- path: /v1/reports/tags
+- path: /v1/assets/{asset}/metrics
   method: get
+  operationId: getV1AssetsByAssetMetrics
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
+- path: /v1/assets/{asset}/timeseries/{metric}
+  method: get
+  operationId: getV1AssetsByAssetTimeseriesByMetric
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
+- path: /v2/assets
+  method: get
+  operationId: getV2Assets
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
+- path: /v2/assets/{ids}/details
+  method: get
+  operationId: getV2AssetsByIdsDetails
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
+- path: /v2/assets/{asset}/time-series/{metric}
+  method: get
+  operationId: getV2AssetsByAssetTimeSeriesByMetric
   x-agentic-access:
     action-class: connected
     consequence: read
@@ -412,6 +158,7 @@ operations:
     audit: none
 - path: /v1/datasets
   method: get
+  operationId: getV1Datasets
   x-agentic-access:
     action-class: connected
     consequence: read
@@ -421,6 +168,299 @@ operations:
     audit: none
 - path: /v1/datasets/{slug}/{granularity}/data
   method: get
+  operationId: getV1DatasetsBySlugByGranularityData
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
+- path: /exchanges
+  method: get
+  operationId: getExchanges
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
+- path: /exchanges/{exchange}
+  method: get
+  operationId: getExchangesByExchange
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
+- path: /v1/markets
+  method: get
+  operationId: getV1Markets
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
+- path: /v1/markets/{marketIdentifier}
+  method: get
+  operationId: getV1MarketsByMarketIdentifier
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
+- path: /v1/markets/{market}/metrics
+  method: get
+  operationId: getV1MarketsByMarketMetrics
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
+- path: /v1/markets/{market}/timeseries/{metric}
+  method: get
+  operationId: getV1MarketsByMarketTimeseriesByMetric
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
+- path: /v2/monitoring-views
+  method: get
+  operationId: getV2MonitoringViews
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
+- path: /v1/watchlists
+  method: get
+  operationId: getV1Watchlists
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
+- path: /v1/watchlists
+  method: post
+  operationId: postV1Watchlists
+  x-agentic-access:
+    action-class: acting
+    consequence: write
+    subject: required
+    audience: null
+    token:
+      max-ttl: 900
+    escalation:
+      human-in-the-loop: conditional
+      triggers:
+      - abnormal
+      - high-value
+    audit: required
+- path: /v1/watchlists/{id}
+  method: patch
+  operationId: patchV1WatchlistsById
+  x-agentic-access:
+    action-class: acting
+    consequence: write
+    subject: required
+    audience: null
+    token:
+      max-ttl: 900
+    escalation:
+      human-in-the-loop: conditional
+      triggers:
+      - abnormal
+      - high-value
+    audit: required
+- path: /v2/networks
+  method: get
+  operationId: getV2Networks
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
+- path: /v2/networks/{network}/metrics
+  method: get
+  operationId: getV2NetworksByNetworkMetrics
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
+- path: /v2/networks/{network}/timeseries/{metric}
+  method: get
+  operationId: getV2NetworksByNetworkTimeseriesByMetric
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
+- path: /v1/news-feed
+  method: get
+  operationId: getV1NewsFeed
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
+- path: /v1/news-sources
+  method: get
+  operationId: getV1NewsSources
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
+- path: /v1/events
+  method: post
+  operationId: postV1Events
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
+- path: /v2/developments
+  method: get
+  operationId: getV2Developments
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
+- path: /v2/events
+  method: get
+  operationId: getV2Events
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
+- path: /protocols
+  method: get
+  operationId: getProtocols
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
+- path: /protocols/{protocol}/metrics
+  method: get
+  operationId: getProtocolsByProtocolMetrics
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
+- path: /dex
+  method: get
+  operationId: getDex
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
+- path: /lending
+  method: get
+  operationId: getLending
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
+- path: /liquid-staking
+  method: get
+  operationId: getLiquidStaking
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
+- path: /v1/reports
+  method: get
+  operationId: getV1Reports
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
+- path: /v1/reports/{reportId}
+  method: get
+  operationId: getV1ReportsByReportId
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
+- path: /v1/reports/tags
+  method: get
+  operationId: getV1ReportsTags
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
+- path: /v1/assets/{assetId}/unlocks
+  method: get
+  operationId: getV1AssetsByAssetIdUnlocks
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
+- path: /v1/assets/{assetId}/vesting-schedule
+  method: get
+  operationId: getV1AssetsByAssetIdVestingSchedule
   x-agentic-access:
     action-class: connected
     consequence: read
