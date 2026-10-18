@@ -31,6 +31,15 @@ accessModel:
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/messari.png
 tags:
 - Web3
+- Cryptocurrency
+- Research
+- Analytics
+- Asset Data
+- Fundamentals
+- News
+- Token Unlocks
+tags_raw:
+- Web3
 - Crypto
 - Research
 - Analytics
@@ -49,6 +58,13 @@ apis:
 - aid: messari:rest-api
   name: Messari REST API
   tags:
+  - Cryptocurrency
+  - Asset Data
+  - Market Data
+  - News
+  - Fundamentals
+  - Token Unlocks
+  tags_raw:
   - Crypto
   - Asset Data
   - Market Data
