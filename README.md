@@ -1,4 +1,4 @@
-# Messari (messari)
+# Messari
 
 <!-- API-EVANGELIST-PROVENANCE:BEGIN -->
 > ### About this repository
@@ -66,61 +66,144 @@
 
 Messari provides crypto research, analytics, fundamentals, intelligence, and asset profiles through a REST API at data.messari.io. Endpoints cover assets metrics, market data, news, Token Unlocks, screener, governance, treasuries, and AI-powered Messari Copilot. Authentication is via the x-messari-api-key header.
 
-**APIs.json:** [https://raw.githubusercontent.com/api-evangelist/messari/refs/heads/main/apis.yml](https://raw.githubusercontent.com/api-evangelist/messari/refs/heads/main/apis.yml)
+**Areas:** Web3 · Cryptocurrency · Research · Analytics · Asset Data · Fundamentals · News · Token Unlocks
 
-## Tags
+## Messari on APIs.io
 
-- Web3
-- Crypto
-- Research
-- Analytics
-- Asset Data
-- Fundamentals
-- News
-- Token Unlocks
+Everything profiled for Messari is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/messari/](https://apis.io/providers/messari/)** — or go straight to one of the APIs or properties below.
 
-## Timestamps
+### APIs (12)
 
-- **Created:** 2026-05-08
-- **Modified:** 2026-05-08
+- [Messari REST API](https://apis.io/apis/messari/rest-api/) — Comprehensive REST API exposing /v1, /v2 endpoints for asset metrics (price, market cap, ROI, mining stats, supply, developer activity, ROI), markets, news,…
+- [Messari AI API](https://apis.io/apis/messari/messari-ai-api/) — The AI API from Messari — 4 operation(s) for ai.
+- [Messari Assets API](https://apis.io/apis/messari/messari-assets-api/) — The Assets API from Messari — 7 operation(s) for assets.
+- [Messari Datasets API](https://apis.io/apis/messari/messari-datasets-api/) — The Datasets API from Messari — 2 operation(s) for datasets.
+- [Messari Exchanges API](https://apis.io/apis/messari/messari-exchanges-api/) — The Exchanges API from Messari — 2 operation(s) for exchanges.
+- [Messari Markets API](https://apis.io/apis/messari/messari-markets-api/) — The Markets API from Messari — 4 operation(s) for markets.
+- [Messari Monitoring API](https://apis.io/apis/messari/messari-monitoring-api/) — The Monitoring API from Messari — 3 operation(s) for monitoring.
+- [Messari Networks API](https://apis.io/apis/messari/messari-networks-api/) — The Networks API from Messari — 3 operation(s) for networks.
+- [Messari News API](https://apis.io/apis/messari/messari-news-api/) — The News API from Messari — 5 operation(s) for news.
+- [Messari Protocols API](https://apis.io/apis/messari/messari-protocols-api/) — The Protocols API from Messari — 5 operation(s) for protocols.
+- [Messari Research API](https://apis.io/apis/messari/messari-research-api/) — The Research API from Messari — 3 operation(s) for research.
+- [Messari Token Unlocks API](https://apis.io/apis/messari/messari-token-unlocks-api/) — The Token Unlocks API from Messari — 2 operation(s) for token unlocks.
 
-## APIs
+### Published properties
 
-### Messari REST API
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
 
-Comprehensive REST API exposing /v1, /v2 endpoints for asset metrics (price, market cap, ROI, mining stats, supply, developer activity, ROI), markets, news, Token Unlocks, screener, and curated intel. Higher-tier plans unlock proprietary research datasets.
+#### MCP servers (1)
 
-- **Human URL:** [https://messari.io/api/docs](https://messari.io/api/docs)
-- **Base URL:** `https://data.messari.io/api`
+Model Context Protocol servers that expose the API to agents.
 
-#### Tags
+- [messari](https://apis.io/servers/messari/messari/)
 
-- Crypto
-- Asset Data
-- Market Data
-- News
-- Fundamentals
-- Token Unlocks
+#### Agentic access (1)
 
-#### Properties
+Which operations an agent can call, which act, and which need a human in the loop.
 
+- [Messari Agentic Access](https://apis.io/agentic-access/messari/messari-agentic-access/)
+
+#### Collections (12)
+
+Postman and Open Collection request collections.
+
+- [Messari API](https://apis.io/collections/messari/open-messari/)
+- [Messari AI API](https://apis.io/collections/messari/open-messari-ai-api/)
+- [Messari AI Assets API](https://apis.io/collections/messari/open-messari-assets-api/)
+- [Messari AI Datasets API](https://apis.io/collections/messari/open-messari-datasets-api/)
+- [Messari AI Exchanges API](https://apis.io/collections/messari/open-messari-exchanges-api/)
+- [Messari AI Markets API](https://apis.io/collections/messari/open-messari-markets-api/)
+- [Messari AI Monitoring API](https://apis.io/collections/messari/open-messari-monitoring-api/)
+- [Messari AI Networks API](https://apis.io/collections/messari/open-messari-networks-api/)
+- [Messari AI News API](https://apis.io/collections/messari/open-messari-news-api/)
+- [Messari AI Protocols API](https://apis.io/collections/messari/open-messari-protocols-api/)
+- [Messari AI Research API](https://apis.io/collections/messari/open-messari-research-api/)
+- [Messari AI Token Unlocks API](https://apis.io/collections/messari/open-messari-token-unlocks-api/)
+
+#### Security (2)
+
+Authentication, trust centre, and vulnerability disclosure.
+
+- [Messari Authentication](https://apis.io/security/messari/messari-authentication/)
+- [Messari Domain Security](https://apis.io/security/messari/messari-domain-security/)
+
+#### Plans and pricing (1)
+
+Published plans, tiers and prices.
+
+- [Messari Plans Pricing](https://apis.io/plans/messari/messari-plans-pricing/)
+
+#### Rate limits (1)
+
+Published request limits.
+
+- [Messari Rate Limits](https://apis.io/rate-limits/messari/messari-rate-limits/)
+
+#### FinOps (1)
+
+What the API costs to run, by operation.
+
+- [Messari Finops](https://apis.io/finops/messari/messari-finops/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
+- [Website](https://messari.io)
 - [Documentation](https://messari.io/api/docs)
 - [Pricing](https://messari.io/pricing)
-- [Postman Collection](collections/messari.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/messari.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
 
-## Common Properties
+## API Evangelist rating
 
-- [LinkedIn](https://www.linkedin.com/company/messari)
-- [Portal](https://messari.io/)
-- [Documentation](https://messari.io/api/docs)
-- [Pricing](https://messari.io/pricing)
-- [Git Hub](https://github.com/messari)
-- [Plans](plans/messari-plans-pricing.yml)
-- [Rate Limits](rate-limits/messari-rate-limits.yml)
-- [Fin Ops](finops/messari-finops.yml)
+**Kin Score 26.6** — thin · rubric 0.25.0 · scored 2026-10-23
 
-## Maintainers
+| Facet | Score |
+|---|---|
+| Discoverability | 68.3 |
+| Contract quality | 45.3 |
+| Contract governance | 0.0 |
+| Operational transparency | 13.2 |
+| Developer ergonomics | 26.2 |
+| Access clarity | 13.2 |
 
-**FN:** Kin Lane
-**Email:** kin@apievangelist.com
+**Agent readiness 43.9** — agent-ready (gated down from agent-native)
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | yes |
+| Agentic Access | derived (partial credit) |
+| Reversibility Documented | — |
+| MCP Server | verified |
+| Auth Clarity | served (partial credit) |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | derived (partial credit) |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | served (partial credit) |
+| Protected Resource Metadata | verified |
+| Dynamic Client Registration | yes |
+| Agentic Commerce | — |
+| Pagination Ratio | na |
+| Operation Distinctiveness | distinct |
+
+**Regulatory alignment 11.8** — Horizontal (data, software, accessibility, platform)
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/messari/](https://apis.io/providers/messari/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Messari: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/messari/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
